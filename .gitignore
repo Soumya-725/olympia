@@ -44,3 +44,8 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+#envionment_satup
+/server/.env
+/server/node_modules
+

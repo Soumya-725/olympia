@@ -1,0 +1,11 @@
+.header-gamepage {
+    background-color: #fff;
+}
+.logo-left img {
+    margin: 20px 40px;
+    cursor: pointer;
+}
+.logo-right img {
+    margin: 25px 40px;
+    float: right;
+}

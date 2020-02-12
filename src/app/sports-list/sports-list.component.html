@@ -1,0 +1,8 @@
+<div class="sports-container">
+    <div class="sports-card-container">
+        <div class="sports-card" *ngFor="let sport of allSports">
+            <h1 [innerHTML]="color(sport.sport_name)"></h1>
+        </div>
+        
+    </div>
+</div>

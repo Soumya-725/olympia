@@ -1,1 +1,271 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f2f2f2;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    color: #444444;
+    font-weight: normal;
+}
+a{
+    color: #ea2127;
+    text-decoration: none;
+}
+.wrapper{
+    min-height: calc(100vh - 70px);
+}
+.index-header{
+    overflow: auto;
+}
+.index-header-logo{
+    margin-top:118px;
+    text-align: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+.search-bar-container{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.search-bar{
+    display: inline-block;
+    position: relative;
+}
+.search-bar input{
+    padding: 15px;
+    width: 500px;
+    border-radius: 5px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid #d2d2d2;
+}
+.search-bar button{
+    position: absolute;
+    background: none;
+    border: none;
+    cursor: pointer;
+    top: 50%;
+    transform: translate(-40px,-50%);
+    font-size: 23px;
+    color: #ea2127;
+}
+.sports-container{
+    padding: 44px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.sports-card-container{
+    display: inline-flex;
+    flex-wrap: wrap;
+    max-width: 1230px;
+}
+.sports-card{
+    cursor: pointer;
+    margin: 15px;
+    padding:47px 0;
+    text-align: center;
+    width: 360px;
+    display: inline-block;
+    border: 1px solid #d2d2d2;
+    background-color: #ffffff;
+}
+.card-data{
+    width: 100%;
+}
+
+.game-body {
+    margin-top: 60px;
+    margin-left: 360px;
+    font-weight: bold;
+    font-size: 32px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}.game {
+    color: #444444; 
+}
+.name {
+    color: #ea2127;
+}
+.game-players-list {
+    margin-left: 360px;
+    margin-top: 25px;
+}
+.picture1 img{
+    overflow: hidden;
+    border-radius: 50%;
+}
+.player-name{
+    display: inline-block;
+    margin-left: 5px;
+    transform: translateY(-80%);
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 10px;
+}
+.player-name4 {
+    display: inline-block;
+    transform: translateY(-37%);
+    padding-left: 5px;
+    padding-bottom: 10px;
+}
+.players {
+    color: #444444;
+    
+}
+.playersName {
+    color: #ea2127;
+    padding-left: 5px;
+}
+.picture2 img{
+    overflow: hidden;
+    border-radius: 50%;
+}
+.picture3 img{
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #444444;
+}
+.picture4 {
+   display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50%;
+    font-size: 32px;
+    color: #fff;
+    font-weight: bold;
+    background-color: #444444;
+}
+.picture5 img{
+    overflow: hidden;
+    border-radius: 50%;
+    background-color: #444444;
+}
+.picture6 img{
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.player-profile-page-container{
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+.player-profile-page-container div {
+    max-width: 1300px;
+}
+.upper-div {
+    margin: 65px 0 0 10px;
+}
+.pages span a {
+    text-decoration: none;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 15.5px;
+    font-weight: 300;
+}
+.page-1 {
+    color: rgb(230, 48, 57);
+}
+.page-2 {
+    color: rgb(71, 72, 73);
+}
+.pages {
+    padding-bottom: 40px;
+}
+.pages span:nth-child(odd) {
+    margin-left: 9px;
+    margin-right: 9px;
+}
+.player-name{
+    margin-top: 56px;
+    padding: 0 !important;
+}
+
+.player-name img {
+    width: 60px;
+    border-radius: 50%;
+    border-color: rgb(210, 213, 213);
+    border-style: solid;
+    border-width: 1px;
+}
+span.player-name-txt span {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    font-weight: 550;
+}
+span.player-name-txt span:nth-child(even) {
+    color: rgb(230, 48, 57);
+}
+span.player-name-txt span:nth-child(odd) {
+    color: rgb(71, 72, 73);
+}
+span.player-name-txt {
+    position: relative;
+    bottom: 20px;
+    left: 20px;
+}
+div.player-account-single {
+    float: left;
+    width: 380px;
+}
+.txt-twitter{
+    color: rgb(42, 179, 231);
+}
+.img-accounts {
+    height: 40px;
+    width: auto;
+    padding-bottom: 20px;
+}
+.txt-youtube{
+    color: rgb(206, 40, 42);
+}
+.txt-insta{
+    color: rgb(170, 0, 116);
+}
+.player-account-single div span {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 32px;
+    font-weight: 550;
+    position: relative;
+    bottom: 27px;
+    left: 20px;
+}
+
+
+
+footer{
+    padding: 25px;
+    background-color: #fff;
+    text-align: center;
+
+}
+.footer-text{
+  color: #636363;
+  font-size: 15px;
+}
+
+
+.content {
+    max-width: 380px;
+    height: 300px;
+    background-color: white;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(210, 213, 213);
+    overflow: scroll;
+}
+.player-accounts .player-account-single{
+    margin: 0 15px;
+
+
+}
+
+
+@media screen and (max-width: 1260px){
+    .sports-card-container{
+        max-width: 800px;
+    }
+}
