@@ -34,8 +34,8 @@ import { HeaderComponent } from './header/header.component';
     HttpClientModule,
     RouterModule.forRoot([
       { path: "", component:HomeComponent },
-      { path: "players/:category", component: PlayerListComponent},
-      { path:"player/:id", component: PlayerProfileComponent },
+      { path: "players/:sports_id", component: PlayerListComponent},
+      { path:"player/:player_id", component: PlayerProfileComponent },
       { path:"**", component:NotFoundComponent }
     ])
   ],

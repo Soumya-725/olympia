@@ -1,4 +1,6 @@
+import { ApiRoutingService } from './../api-routing.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-player-list',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player-list.component.css']
 })
 export class PlayerListComponent implements OnInit {
+  sport_id: any;
+  players:any[];
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private ApiRoutingService: ApiRoutingService,private Router:Router) { }
 
   ngOnInit() {
+    this.route.paramMap
+      .subscribe( params=>{
+        this.sport_id = params.get('sports_id')
+      })
+      this.ApiRoutingService.getPlayers$(this.sport_id)
+        .subscribe( players =>{
+          this.players = players[0];
+        },
+        err=>{
+          this.Router.navigate(["Not Found"])
+        })
   }
-
 }

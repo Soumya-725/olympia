@@ -1,62 +1,13 @@
 
     <app-header></app-header>
     <div class="game-body">
-        <span class="game">Game </span>
-        <span class="name">Name 1</span>
+        <span class="name">{{ players[0].sport_name }}</span>
     </div>
-    <div class="game-players-list">
+    <div class="game-players-list" *ngFor="let player of players" routerLink="/player/{{player.player_id}}">
         <span class="picture1"><img src="../../assets/user-1.png" alt="player1" height="60px"></span>
         <div class="player-name">
-            <span class="players">Players</span>
-            <span class="playersName">Name 1</span>
+            <span class="players">{{ player.player_name }}</span>
+            <!-- <span class="playersName">Name 1</span> -->
         </div>    
     </div>
-    <div class="game-players-list">
-        <span class="picture1"><img src="../../assets/user-1.png" alt="player1" height="60px"></span>
-        <div class="player-name">
-            <span class="players">Players</span>
-            <span class="playersName">Name 1</span>
-        </div>    
-    </div>
-    <div class="game-players-list">
-        <span class="picture1"><img src="../../assets/user-1.png" alt="player1" height="60px"></span>
-        <div class="player-name">
-            <span class="players">Players</span>
-            <span class="playersName">Name 1</span>
-        </div>    
-    </div>
-    <div class="game-players-list">
-        <span class="picture1"><img src="../../assets/user-1.png" alt="player1" height="60px"></span>
-        <div class="player-name">
-            <span class="players">Players</span>
-            <span class="playersName">Name 1</span>
-        </div>    
-    </div>
-    <div class="game-players-list">
-        <span class="picture1"><img src="../../assets/user-1.png" alt="player1" height="60px"></span>
-        <div class="player-name">
-            <span class="players">Players</span>
-            <span class="playersName">Name 1</span>
-        </div>    
-    </div>
-    <div class="game-players-list">
-        <span class="picture1"><img src="../../assets/user-1.png" alt="player1" height="60px"></span>
-        <div class="player-name">
-            <span class="players">Players</span>
-            <span class="playersName">Name 1</span>
-        </div>    
-    </div>
-    <div class="game-players-list">
-        <span class="picture1"><img src="../../assets/user-1.png" alt="player1" height="60px"></span>
-        <div class="player-name">
-            <span class="players">Players</span>
-            <span class="playersName">Name 1</span>
-        </div>    
-    </div>
-    <div class="game-players-list">
-        <span class="picture1"><img src="../../assets/user-1.png" alt="player1" height="60px"></span>
-        <div class="player-name">
-            <span class="players">Players</span>
-            <span class="playersName">Name 1</span>
-        </div>    
-    </div>
+    

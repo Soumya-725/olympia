@@ -92,6 +92,7 @@ a{
 .game-players-list {
     margin-left: 360px;
     margin-top: 25px;
+    cursor: pointer;
 }
 .picture1 img{
     overflow: hidden;
