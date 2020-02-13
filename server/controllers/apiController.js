@@ -2,6 +2,7 @@ const insta = require('instagram-web-api')
 const latestTweets = require('latest-tweets')
 const https = require('https')
 const dotenv = require('dotenv');
+
 dotenv.config();
 const { INSTAUSER, 
         INSTAPASS,
@@ -81,8 +82,8 @@ exports.getUTube =  (req, res) =>{
         })
 }
 
-exports.getTwit = (req, res) =>{
-    latestTweets(`${req.params.username}`, function (err, tweets) {
+exports.getTwit = async (req, res) =>{
+    await latestTweets(`${req.params.username}`, (err, tweets)=>{
         res.send(tweets);
     })
 }

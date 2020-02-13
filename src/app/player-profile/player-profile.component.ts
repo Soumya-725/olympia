@@ -1,5 +1,6 @@
+import { ApiRoutingService } from './../api-routing.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'player-profile',
@@ -7,15 +8,56 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./player-profile.component.css']
 })
 export class PlayerProfileComponent implements OnInit {
-  player_id: any;
 
-  constructor(private route: ActivatedRoute) { }
+  player_id: any;
+  player_details: any;
+  p_sport_id: any;
+  p_sport_name: any;
+  p_player_name: any;
+  p_twitter_username: any;
+  twitters: any[];
+  p_insta_username: any;
+  instas: any[];
+
+  constructor(private route: ActivatedRoute, private ApiRoutingService: ApiRoutingService, private Router: Router) { }
 
   ngOnInit() {
     this.route.paramMap
       .subscribe( params=>{
         this.player_id = params.get('player_id');
       })
+
+      this.ApiRoutingService.getPlayerDet$(this.player_id)
+        .subscribe(player_details =>{
+          this.player_details = player_details[0][0];
+          this.p_sport_id = this.player_details.sport_id;
+          this.p_sport_name = this.player_details.sport_name;
+          this.p_player_name =  this.player_details.player_name;
+          this.p_twitter_username = this.player_details.player_det_twitter;
+          this.p_insta_username = this.player_details.player_det_insta;
+          this.ApiRoutingService.getTwit$(this.p_twitter_username)
+          .subscribe(tData =>{
+            // console.log(tData)
+            this.twitters = tData;
+          },
+          err=>{
+
+          })
+
+          this.ApiRoutingService.getInsta$(this.p_insta_username)
+          .subscribe(tData =>{
+            // console.log(tData)
+            this.instas = tData;
+          },
+          err=>{
+
+          })
+        },
+        err=>{
+          this.Router.navigate(["Not Found"])
+        })
+
+        
   }
   
 }

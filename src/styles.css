@@ -170,6 +170,9 @@ a{
 .page-1 {
     color: rgb(230, 48, 57);
 }
+.clickable{
+    cursor: pointer;
+}
 .page-2 {
     color: rgb(71, 72, 73);
 }

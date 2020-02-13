@@ -10,6 +10,8 @@ export class ApiRoutingService {
   allSportsUrl = 'http://localhost:8080/api/sports';
   players_by_sport_catUrl = 'http://localhost:8080/api/sports/';
   player_detailsUrl = 'http://localhost:8080/api/player/';
+  getTwit = 'http://localhost:8080/api/twit/'
+  getInsta = 'http://localhost:8080/api/insta/'
 
   constructor(private http: HttpClient) { }
   getSports$(): Observable<any> {
@@ -20,5 +22,11 @@ export class ApiRoutingService {
   }
   getPlayerDet$(player_id): Observable<any> {
     return this.http.get(this.player_detailsUrl+player_id);
+  }
+  getTwit$(username): Observable<any>{
+    return this.http.get(this.getTwit+username);
+  }
+  getInsta$(username): Observable<any>{
+    return this.http.get(this.getInsta+username);
   }
 }

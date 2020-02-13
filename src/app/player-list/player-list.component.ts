@@ -10,6 +10,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class PlayerListComponent implements OnInit {
   sport_id: any;
   players:any[];
+  sport_name: any;
 
   constructor(private route: ActivatedRoute, private ApiRoutingService: ApiRoutingService,private Router:Router) { }
 
@@ -21,6 +22,7 @@ export class PlayerListComponent implements OnInit {
       this.ApiRoutingService.getPlayers$(this.sport_id)
         .subscribe( players =>{
           this.players = players[0];
+          this.sport_name = this.players[0].sport_name;
         },
         err=>{
           this.Router.navigate(["Not Found"])
