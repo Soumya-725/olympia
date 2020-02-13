@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { PlayerListComponent } from './player-list/player-list.component';
 import { SportsListComponent } from './sports-list/sports-list.component';
@@ -30,7 +30,7 @@ import { HeaderComponent } from './header/header.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+  
     HttpClientModule,
     RouterModule.forRoot([
       { path: "", component:HomeComponent },

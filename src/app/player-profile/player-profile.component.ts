@@ -18,10 +18,16 @@ export class PlayerProfileComponent implements OnInit {
   twitters: any[];
   p_insta_username: any;
   instas: any[];
+  isYoutubeHide:boolean = false;
+  isTwitterHide:boolean = false;
+  isInstaHide:boolean = false;
+  isSocialLoading: boolean = true;
+  loadingCount:number;
 
   constructor(private route: ActivatedRoute, private ApiRoutingService: ApiRoutingService, private Router: Router) { }
 
   ngOnInit() {
+    this.loadingCount = 0;
     this.route.paramMap
       .subscribe( params=>{
         this.player_id = params.get('player_id');
@@ -39,6 +45,10 @@ export class PlayerProfileComponent implements OnInit {
           .subscribe(tData =>{
             // console.log(tData)
             this.twitters = tData;
+            this.loadingCount++; 
+            if(this.loadingCount >= 2 ){
+              this.isSocialLoading = false;
+            }
           },
           err=>{
 
@@ -48,17 +58,22 @@ export class PlayerProfileComponent implements OnInit {
           .subscribe(tData =>{
             // console.log(tData)
             this.instas = tData;
+            this.loadingCount++; 
+            if(this.loadingCount >= 2 ){
+              this.isSocialLoading = false;
+            }
           },
           err=>{
 
           })
         },
         err=>{
-          this.Router.navigate(["Not Found"])
+          this.Router.navigateByUrl("/notFound", { skipLocationChange: true });
         })
 
         
   }
+
   
 }
 

@@ -23,6 +23,7 @@
                 <span class="txt-twitter">Twitter</span>
             </div>
             <div class="content">
+                <img src="https://www.3nions.com/wp-content/uploads/2020/01/comp_1.gif" alt="" class="socialLoading" *ngIf="isSocialLoading">
                 <ul>
                     <li *ngFor="let twit of twitters">
                         <p style="width: 100px">{{ twit.content }}</p>
@@ -44,6 +45,7 @@
                 <span class="txt-insta">Instagram</span>
             </div>
             <div class="content">
+                <img src="https://cdn.dribbble.com/users/2475489/screenshots/9553468/1-instagram.gif" alt="" class="socialLoading" *ngIf="isSocialLoading">
                 <ul>
                     <li *ngFor="let insta of instas">
                         <p style="width: 100px">{{insta.node.thumbnail_resources[1].src}}</p>
